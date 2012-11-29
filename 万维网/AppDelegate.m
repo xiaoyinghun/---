@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "VIewController.h"
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -23,6 +23,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    VIewController *vv=[[VIewController alloc]init];
+    [self.window addSubview:vv.view];
+    
+    
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
